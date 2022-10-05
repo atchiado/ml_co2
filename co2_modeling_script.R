@@ -12,7 +12,7 @@ ml_co2_data <- read.csv(file = "~/Desktop/work/data/r/ml_co2/CO2_emission.csv")
 co2_data <- ml_co2_data %>%
   select(-c(Model_Year, Make, Model)) %>%
   mutate_if(is.ordered, factor, ordered = FALSE) %>%
-  subset()
+  filter()
 
 set.seed(123)
 
